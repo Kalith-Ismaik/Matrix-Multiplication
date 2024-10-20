@@ -1,0 +1,1 @@
+Naive Implementation of CUDA kernel based 2-Dimensional matrix-matrix multiplication. And preliminary benchmarking with cuBLAS GEMM.
