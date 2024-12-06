@@ -1,0 +1,24 @@
+NVIDIA SDK 24.7.0 Installation and exporting
+
+Creating Private Environement:
+mkdir -p ~/NVCUDA_env
+cd ~/NVCUDA_env
+
+Installation:
+wget https://developer.download.nvidia.com/hpc-sdk/24.7/nvhpc_2024_247_Linux_x86_64_cuda_12.5.tar.gz
+tar xpzf nvhpc_2024_247_Linux_x86_64_cuda_12.5.tar.gz
+nvhpc_2024_247_Linux_x86_64_cuda_12.5/install
+
+NOTE: Install in path of private directory ~/NVCUDA_env/NVHPC with autoinstall option
+
+Exporting:
+export NVHPC_HOME=~/NVCUDA_env/NVHPC
+export PATH=$NVHPC_HOME/Linux_x86_64/24.7/compilers/bin:$PATH
+export LD_LIBRARY_PATH=$NVHPC_HOME/Linux_x86_64/24.7/compilers/lib:$LD_LIBRARY_PATH
+export MANPATH=$NVHPC_HOME/Linux_x86_64/24.7/compilers/man:$MANPATH
+
+source ~/.bashrc
+
+pgcc --version
+pgc++ --version
+pgfortran --version
